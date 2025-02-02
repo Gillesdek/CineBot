@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@cucumber/cucumber": "^10.7.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -18,7 +19,7 @@
     "start-api": "pipenv run uvicorn  --app-dir api/  app:app --port 5000",
     "start-dev-api": "pipenv run uvicorn  --app-dir api/  app:app --reload --port 5000",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cucumber-js features/greeting.feature",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
